@@ -1,8 +1,7 @@
 name: 'issue CI'
-on: issue_comment
+on: issues
 jobs:
   issue_comment:
-    if:  ${{ !github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - run: |
