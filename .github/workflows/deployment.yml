@@ -1,5 +1,11 @@
 name: "Lint and test"
-on: [push,workflow_dispatch]
+on: 
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '.github/workflows/*'
+  workflow_dispatch:
 jobs:
   lint:
     runs-on: ubuntu-latest
